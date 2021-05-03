@@ -1,5 +1,14 @@
 #install.packages('usethis')
 library(usethis)
+my_cols <- function(...) {
+  cols <- c(...)
+
+  if (is.null(cols))
+    return (my_colors)
+
+  my_colors[cols]
+}
+
 my_colors <- c(
   `liberal`        = "darkred",
   `conservative`      = "darkblue",
